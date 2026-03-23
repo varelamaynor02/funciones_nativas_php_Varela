@@ -801,4 +801,8 @@ echo date('d-m-Y'); // Salida: 23-03-2026 (fecha actual)
 $frase = "El perro es el mejor amigo del hombre.";
 echo strtoupper($frase); echo decbin($minisculas);
 
+//==========================================================================================================================================================
+/*fuente: https://www.php.net/manual/es/ref.array.php
+
+The PHP Group. (s.f.). Índice de funciones y métodos (S). PHP: Hypertext Preprocessor. https://www.php.net/manual/es/indexes.functions.php#refentry-index-for-s. Las citas correspondientes son (The PHP Group, s.f.) para el formato parentético y The PHP Group (s.f.) para el narrativo. Consulta el manual completo en php.net.*/
 ?>
