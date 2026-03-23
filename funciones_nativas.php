@@ -180,4 +180,32 @@ Array
     [c] => limón
 )
 */
+/*
+ArrayIterator::rewind
+ArrayIterator::rewind — Rebobinar array al inicio
+
+Descripción
+public ArrayIterator::rewind(): void
+Rebobina el iterador al inicio del array.
+
+Parámetros: ninguno
+Esta función no contiene ningún parámetro.*/
+
+$frutas = ['Manzana', 'Banana', 'Cereza'];
+$iterator = new ArrayIterator($frutas);
+
+// 1. Recorrer la primera vez
+echo "Primer recorrido:\n";
+foreach ($iterator as $key => $value) {
+    echo "$key: $value\n";
+}
+
+// 2. Rebobinar al inicio
+$iterator->rewind();
+
+// 3. Recorrer de nuevo
+echo "\nSegundo recorrido (tras rewind):\n";
+echo $iterator->current(); // Muestra 'Manzana' nuevamente
+
+
 ?>
