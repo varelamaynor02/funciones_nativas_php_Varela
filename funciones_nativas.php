@@ -142,7 +142,7 @@ $frutas = ["Manzana", "Banana", "Cereza", "Naranja"];
 $iterator = new ArrayIterator($frutas);
 
 // 3. Usar el método count() del iterador
-echo "Total de frutas: " . $iterator->count(); 
+echo "Total de frutas: " . $iterator->count();
 // Salida: Total de frutas: 4
 
 // También se puede usar dentro de un bucle para verificar el tamaño
@@ -208,4 +208,39 @@ echo "\nSegundo recorrido (tras rewind):\n";
 echo $iterator->current(); // Muestra 'Manzana' nuevamente
 
 
+/*array_combine
+array_combine — Crea un array a partir de dos otros arrays
+
+Descripción
+array_combine(array $keys, array $values): array
+Crea un array, donde las claves son los valores de keys, y los valores son los valores de values.
+
+Parámetros
+keys
+Array de claves a utilizar. Los valores ilegales para las claves serán convertidos en string.
+
+values
+Array de valores a utilizar
+
+Valores devueltos
+Devuelve el array combinado. Si keys y values no tienen el mismo número de elementos, devuelve false y emite un error de nivel E_WARNING.
+
+Errores/Excepciones
+A partir de PHP 8.0.0, lanza un error de tipo ValueError si el número de elementos de keys y de values no coinciden. Anteriormente, lanzaba una advertencia de nivel E_WARNING.
+*/
+
+$claves = array("nombre", "edad", "puesto");
+$valores = array("Ana", 28, "Desarrolladora");
+
+$resultado = array_combine($claves, $valores);
+
+print_r($resultado);
+/* 
+Resultado:
+Array (
+    [nombre] => Ana
+    [edad] => 28
+    [puesto] => Desarrolladora
+)
+*/
 ?>
