@@ -793,5 +793,7 @@ echo "\n";
 $minisculas = "php es genial";
 echo strtoupper($minisculas); // Salida: PHP ES GENIAL
 echo "\n";
-
+//==========================================================================================================================================================
+/* 4. date() - Formatea una fecha/hora local*/
+echo date('d-m-Y'); // Salida: 23-03-2026 (fecha actual)
 ?>
