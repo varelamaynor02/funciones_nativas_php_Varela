@@ -436,3 +436,38 @@ $entero1 = "10";
 $entero2 = "3";
 $resultado_mod = bcmod($entero1, $entero2); // Devuelve "1"
 echo "Módulo: $resultado_mod \n";
+
+//=======================================================================================================================================================
+/*bcpow
+(PHP 4, PHP 5, PHP 7, PHP 8)
+
+bcpow — Elevar un número de precisión arbitraria a otro
+
+Descripción ¶
+bcpow(string $num, string $exponent, ?int $scale = null): string
+Eleva num a la potencia exponent.
+
+Parámetros ¶
+num
+La base, como un string.
+
+exponent
+El exponente, como un string. Debe ser un valor sin parte fraccionaria. El rango válido del exponente es específico de la plataforma, pero es al menos de -2147483648 a 2147483647.
+
+scale
+Este parámetro se utiliza para establecer el número de dígitos después del punto decimal en el resultado. Si es null, se establecerá por defecto en la escala predeterminada establecida con bcscale(), o se utilizará el valor de la directiva INI bcmath.scale.
+Valores devueltos ¶
+Devuelve el resultado como un string.
+
+Errores/Excepciones ¶
+Esta función lanza una ValueError en los siguientes casos:
+
+num o exponent no es un string numérico con formato válido de BCMath
+exponent tiene una parte fraccionaria
+exponent o scale están fuera del rango válido
+Esta función lanza una DivisionByZeroError si num es 0 y exponent es un valor negativo.*/
+// Elevar 4.2 a la potencia de 3, con 2 decimales de precisión
+echo bcpow('4.2', '3', 2); // 74.08
+// Ejemplo sin decimales: bcpow('2', '10') devuelve '1024'.
+// Ejemplo con decimales: bcpow('2.5', '2', 2) devuelve '6.25'
+//=======================================================================================================================================================
