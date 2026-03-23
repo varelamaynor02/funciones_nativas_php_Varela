@@ -788,4 +788,10 @@ var_dump($num1, $num2, $num3);
 $texto = "Hola Mundo";
 echo strlen($texto); // Salida: 10
 echo "\n";
+//==========================================================================================================================================================
+// 2. strtoupper() - Convierte una cadena a mayúsculas
+$minisculas = "php es genial";
+echo strtoupper($minisculas); // Salida: PHP ES GENIAL
+echo "\n";
+
 ?>
