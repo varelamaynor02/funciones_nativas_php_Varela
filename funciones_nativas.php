@@ -471,3 +471,64 @@ echo bcpow('4.2', '3', 2); // 74.08
 // Ejemplo sin decimales: bcpow('2', '10') devuelve '1024'.
 // Ejemplo con decimales: bcpow('2.5', '2', 2) devuelve '6.25'
 //=======================================================================================================================================================
+
+
+/*bcround
+(PHP 8 >= 8.4.0)
+
+bcround — Redondea un número de precisión arbitraria
+
+Descripción ¶
+bcround(string $num, int $precision = 0, RoundingMode $mode = RoundingMode::HalfAwayFromZero): string
+Devuelve el valor redondeado de num a la precisión especificada precision (número de dígitos después del punto decimal). precision puede ser también negativo o nulo (por omisión).
+
+Parámetros ¶
+num
+El valor a redondear.
+
+precision
+El número opcional de decimales a redondear.
+
+Si el argumento precision es positivo, num será redondeado utilizando el argumento precision para definir el número significativo de dígitos después del punto decimal.
+
+Si el argumento precision es negativo, num será redondeado utilizando el argumento precision para definir el número significativo de dígitos antes del punto decimal, i.e. el múltiplo más cercano de pow(10, -$precision), i.e. para una precision de -1, num será redondeado a 10, para una precision de -2 a 100, etc.
+
+mode
+Especifica el método de redondeo. Para más información sobre los métodos, ver RoundingMode.
+Valores devueltos ¶
+Devuelve una cadena numérica representando num redondeado a la precisión dada.
+
+Errores/Excepciones ¶
+Esta función lanza una ValueError en los siguientes casos:
+
+num no es una cadena numérica BCMath bien formada.
+Un mode inválido es especificado.
+Ejemplos ¶
+Ejemplo #1 Ejemplos de bcround()
+
+*/
+var_dump(bcround('3.4'));
+var_dump(bcround('3.5'));
+var_dump(bcround('3.6'));
+var_dump(bcround('3.6', 0));
+var_dump(bcround('5.045', 2));
+var_dump(bcround('5.055', 2));
+var_dump(bcround('345', -2));
+var_dump(bcround('345', -3));
+var_dump(bcround('678', -2));
+var_dump(bcround('678', -3));
+
+/*El ejemplo anterior mostrará:
+
+string(1) "3";
+string(1) "4"
+string(1) "4"
+string(1) "4"
+string(4) "5.05"
+string(4) "5.06"
+string(3) "300"
+string(1) "0"
+string(3) "700"
+string(4) "1000"*/
+//=======================================================================================================================================================
+?>
