@@ -68,4 +68,52 @@ var_dump(empty($obj["foobar"]));
 echo "\nRuns obj::offsetExists(), *not* obj:offsetGet() as there is nothing to get\n";
 var_dump(empty($obj["foobaz"]));
 echo "";
+
+/*ArrayIterator::asort
+
+ArrayIterator::asort — Ordena las entradas por los valores
+
+Descripción 
+public ArrayIterator::asort(int $flags = SORT_REGULAR): true
+Ordena las entradas por los valores.
+
+Nota:
+
+Si dos miembros se comparan como iguales, mantienen su orden original. Anterior a PHP 8.0.0, su orden relativo en el array ordenado no está definido.
+
+Parámetros 
+flags
+El segundo parámetro opcional flags puede ser utilizado para modificar el comportamiento de ordenación utilizando estos valores:
+
+Tipo de banderas de ordenación:
+
+SORT_REGULAR - compara los elementos normalmente; los detalles son descritos en la sección de los operadores de comparación
+SORT_NUMERIC - compara los elementos numéricamente
+SORT_STRING - compara los elementos como strings
+SORT_LOCALE_STRING - compara los elementos como strings, basado en la configuración regional actual. Esto utiliza la configuración regional, que puede ser cambiada utilizando setlocale()
+SORT_NATURAL - compara los elementos como strings utilizando el "orden natural" como natsort()
+SORT_FLAG_CASE - puede ser combinado (OR a nivel de bits) con SORT_STRING o SORT_NATURAL para ordenar strings sin tener en cuenta la mayúscula/minúscula
+Valores devueltos: Retorna siempre true. */
+
+// 1. Definir el array asociativo
+$data = [
+    'c' => 'Manzana',
+    'a' => 'Banana',
+    'b' => 'Cereza'
+];
+
+// 2. Crear el objeto ArrayIterator
+$iterator = new ArrayIterator($data);
+
+// 3. Ordenar por valor usando asort()
+$iterator->asort();
+
+// 4. Mostrar el resultado
+foreach ($iterator as $key => $value) {
+    echo "$key : $value\n";
+}
+// Resultado:
+// a : Banana
+// b : Cereza
+// c : Manzana
 ?>
