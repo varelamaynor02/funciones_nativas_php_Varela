@@ -784,16 +784,21 @@ var_dump($num1, $num2, $num3);
 //=========================================================================================================================================================
 /*strlen(): Útil para validar longitudes de campos (ej. contraseñas).
 */
-// 1. strlen() - Cuenta la longitud de una cadena
+// strlen() - Cuenta la longitud de una cadena
 $texto = "Hola Mundo";
 echo strlen($texto); // Salida: 10
 echo "\n";
 //==========================================================================================================================================================
-// 2. strtoupper() - Convierte una cadena a mayúsculas
+// strtoupper() - Convierte una cadena a mayúsculas
 $minisculas = "php es genial";
 echo strtoupper($minisculas); // Salida: PHP ES GENIAL
 echo "\n";
 //==========================================================================================================================================================
-/* 4. date() - Formatea una fecha/hora local*/
+/*  date() - Formatea una fecha/hora local*/
 echo date('d-m-Y'); // Salida: 23-03-2026 (fecha actual)
+//==========================================================================================================================================================
+//str_replace() - Reemplaza todas las apariciones de la cadena de búsqueda con la cadena de reemplazo
+$frase = "El perro es el mejor amigo del hombre.";
+echo strtoupper($frase); echo decbin($minisculas);
+
 ?>
