@@ -758,4 +758,26 @@ var_dump(
     $number->compare('1.23401'),
     $number->compare(1),
 );
+
+//=========================================================================================================================================================
+/*BcMath\Number::__construct
+(PHP 8 >= 8.4.0)
+
+BcMath\Number::__construct — Crear un objeto BcMath\Number
+
+Descripción ¶
+public BcMath\Number::__construct(string|int $num)
+Crear un objeto BcMath\Number a partir de un valor int o string.
+
+Parámetros ¶
+num
+Un valor int o string. Si num es un int, la BcMath\Number::scale se define siempre a 0. Si num es un string, debe ser un número válido, y la BcMath\Number::scale se define automáticamente analizando el string.
+Errores/Excepciones ¶
+Este método lanza una ValueError si num es un string y no es un string numérico BCMath bien formado.*/
+
+$num1 = new BcMath\Number(100);
+$num2 = new BcMath\Number('-200');
+$num3 = new BcMath\Number('300.00');
+
+var_dump($num1, $num2, $num3);
 ?>
