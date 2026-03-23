@@ -304,4 +304,26 @@ $fruit = array_pop($stack);
 print_r($stack);
 print_r($fruit);
 //Despues de esto raspberry se ha eliminado del array $stack y se ha asignado a la variable $fruit. El resultado de print_r($stack) será Array ( [0] => orange [1] => banana [2] => apple ) y el resultado de print_r($fruit) será raspberry.
-?>
+//=======================================================================================================================================================================================================================
+/*array_push
+array_push — Apila uno o más elementos al final de un array
+
+Descripción
+array_push(array &$array, mixed ...$values): int
+array_push() considera array como una pila, y apila las variables values al final de array. La longitud del array array aumenta en consecuencia. Esto tiene el mismo efecto que:
+
+Parámetros 
+array
+El array de entrada.
+
+values
+El valor a insertar al final del array array.
+
+Valores devueltos
+Devuelve el nuevo número de elementos en el array.
+*/
+//repetido para cada valor.
+//Nota: Si se utiliza la función array_push() para añadir un elemento a un array, es preferible reemplazarla por el operador $array[] = que evita el paso por una función.
+$stack = array("orange", "banana");
+array_push($stack, "apple", "raspberry");
+print_r($stack);
