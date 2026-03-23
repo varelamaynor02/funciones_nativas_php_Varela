@@ -780,4 +780,12 @@ $num2 = new BcMath\Number('-200');
 $num3 = new BcMath\Number('300.00');
 
 var_dump($num1, $num2, $num3);
+
+//=========================================================================================================================================================
+/*strlen(): Útil para validar longitudes de campos (ej. contraseñas).
+*/
+// 1. strlen() - Cuenta la longitud de una cadena
+$texto = "Hola Mundo";
+echo strlen($texto); // Salida: 10
+echo "\n";
 ?>
