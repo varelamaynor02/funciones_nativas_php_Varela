@@ -531,4 +531,30 @@ string(1) "0"
 string(3) "700"
 string(4) "1000"*/
 //=======================================================================================================================================================
+
+/*bcsqrt
+(PHP 4, PHP 5, PHP 7, PHP 8)
+
+bcsqrt — Obtiene la raiz cuadrada de un número de precisión arbitraria
+
+Descripción ¶
+bcsqrt(string $num, ?int $scale = null): string
+Devuelve la raiz cudrada de num.
+
+Parámetros ¶
+num
+El operando, como un string numérico con formato válido de BCMath.
+
+scale
+Este parámetro se utiliza para establecer el número de dígitos después del punto decimal en el resultado. Si es null, se establecerá por defecto en la escala predeterminada establecida con bcscale(), o se utilizará el valor de la directiva INI bcmath.scale.
+Valores devueltos ¶
+Devuelve la raiz cuadrada como un string numérico con formato válido de BCMath.
+
+Errores/Excepciones ¶
+Esta función lanza un ValueError en los siguientes casos:
+num no es un string numérico con formato válido de BCMath
+num es menor que 0
+scale está fuera del rango válido*/
+echo bcsqrt('2', 3); // 1.414
+//=======================================================================================================================================================
 ?>
