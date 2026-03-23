@@ -243,4 +243,17 @@ Array (
     [puesto] => Desarrolladora
 )
 */
+
+/*
+array_search
+array_search — Busca en un array la primera clave asociada al valor
+Descripción ¶
+array_search(mixed $needle, array $haystack, bool $strict = false): int|string|false
+*/
+$frutas = ["a" => "manzana", "b" => "banana", "c" => "uva"];
+
+// Buscar el valor "banana"
+$clave = array_search("banana", $frutas);
+
+echo $clave; // Salida: b
 ?>
