@@ -654,4 +654,32 @@ echo "La hipotenusa es: " . $resultado;
 // Salida: La hipotenusa es: 5
 //=======================================================================================================================================================
 
+/*bcmul
+(PHP 4, PHP 5, PHP 7, PHP 8)
+
+bcmul — Multiplica dos números de precisión arbitraria
+
+Descripción ¶
+bcmul(string $num1, string $num2, ?int $scale = null): string
+Multiplica num1 por num2.
+
+Parámetros ¶
+num1
+El operador izquierdo, como una cadena.
+
+num2
+El operador derecho, como una cadena
+
+scale
+Este parámetro se utiliza para establecer el número de dígitos después del punto decimal en el resultado. Si es null, se establecerá por defecto en la escala predeterminada establecida con bcscale(), o se utilizará el valor de la directiva INI bcmath.scale.
+Valores devueltos ¶
+Devuelve el resultado como un string.
+
+Errores/Excepciones ¶
+Esta función lanza una excepción ValueError en los siguientes casos:
+
+num1 o num2 no es una cadena numérica bien formada de BCMath.
+scale está fuera del rango válido.*/
+echo bcmul('1.34747474747', '35', 3); // 47.161
+echo bcmul('2', '4'); // 8
 ?>
