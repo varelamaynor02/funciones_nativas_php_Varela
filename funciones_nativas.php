@@ -733,4 +733,29 @@ $abs2 = gmp_abs("-274982683358");
 echo gmp_strval($abs1) . "\n";
 echo gmp_strval($abs2) . "\n";
 //=======================================================================================================================================================
+
+/*BcMath\Number::compare
+(PHP 8 >= 8.4.0)
+
+BcMath\Number::compare — Comparar dos números de precisión arbitraria
+
+Descripción ¶
+public BcMath\Number::compare(BcMath\Number|string|int $num, ?int $scale = null): int
+Comparar dos números de precisión arbitraria. Este método se comporta de manera similar al operador spaceship.
+
+Parámetros ¶
+num
+El valor al que comparar.
+scale
+Especifica el scale a utilizar para la comparación. Si null, todos los dígitos son utilizados en la comparación.
+Valores devueltos ¶
+Devuelve 0 si los dos números son iguales, 1 si $this es mayor que num, de lo contrario -1.*/
+$number = new BcMath\Number('1.234');
+
+var_dump(
+    $number->compare(new BcMath\Number('1.234')),
+    $number->compare('1.23400'),
+    $number->compare('1.23401'),
+    $number->compare(1),
+);
 ?>
