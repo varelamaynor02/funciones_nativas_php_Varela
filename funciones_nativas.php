@@ -14,8 +14,11 @@ values: La sintaxis "índice => valor", separada por comas, define los índices 
 Tenga en cuenta que si se definen dos índices idénticos, el último sobrescribirá al primero.
 Tener una coma después de definir la última entrada, aunque innecesario, es una sintaxis válida.
 */
-$fruits = array ("fruits"  => array("a" => "orange", "b" => "banana", "c" => "apple"),
-    "numbers" => array(1, 2, 3, 4, 5, 6), "holes"   => array("first", 5 => "second", "third"));
+$fruits = array(
+    "fruits"  => array("a" => "orange", "b" => "banana", "c" => "apple"),
+    "numbers" => array(1, 2, 3, 4, 5, 6),
+    "holes"   => array("first", 5 => "second", "third")
+);
 print_r($fruits);
 
 
@@ -36,22 +39,27 @@ El índice a comprobar.
 Valores devueltos: Esta función retorna true en caso de éxito o false si ocurre un error.
 
 Nota: El valor de retorno se debe convertir a bool si no devuelve un valor boleano.*/
-class obj implements ArrayAccess {
-    public function offsetSet($offset, $value): void {
+class obj implements ArrayAccess
+{
+    public function offsetSet($offset, $value): void
+    {
         var_dump(__METHOD__);
     }
-    public function offsetExists($var): bool {
+    public function offsetExists($var): bool
+    {
         var_dump(__METHOD__);
         if ($var == "foobar") {
             return true;
         }
         return false;
     }
-    public function offsetUnset($var): void {
+    public function offsetUnset($var): void
+    {
         var_dump(__METHOD__);
     }
     #[\ReturnTypeWillChange]
-    public function offsetGet($var) {
+    public function offsetGet($var)
+    {
         var_dump(__METHOD__);
         return "value";
     }
@@ -116,4 +124,29 @@ foreach ($iterator as $key => $value) {
 // a : Banana
 // b : Cereza
 // c : Manzana
+
+
+/*ArrayIterator::count
+
+ArrayIterator::count — Cuenta elementos
+
+Descripción
+public ArrayIterator::count(): int
+Obtiene el número de elementos de un array, o el número de propiedades públicas en un objeto.
+*/
+
+// 1. Crear un array de datos
+$frutas = ["Manzana", "Banana", "Cereza", "Naranja"];
+
+// 2. Instanciar el ArrayIterator
+$iterator = new ArrayIterator($frutas);
+
+// 3. Usar el método count() del iterador
+echo "Total de frutas: " . $iterator->count(); 
+// Salida: Total de frutas: 4
+
+// También se puede usar dentro de un bucle para verificar el tamaño
+if ($iterator->count() > 0) {
+    echo "\nEl iterador tiene elementos.";
+}
 ?>
