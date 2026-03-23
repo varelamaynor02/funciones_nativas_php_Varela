@@ -364,3 +364,38 @@ echo floor(4.7);   // Salida: 4
 echo floor(4.2);   // Salida: 4
 echo floor(-2.1);  // Salida: -3 (redondea hacia abajo)
 //=======================================================================================================================================================================================================================
+/*bcadd
+bcadd — Suma dos números de precisión arbitrária
+
+Descripción 
+bcadd(string $num1, string $num2, ?int $scale = null): string
+Suma num1 y num2.
+
+Parámetros 
+num1
+El operador izquierdo, como una cadena.
+
+num2
+El operador derecho, como una cadena
+
+scale
+Este parámetro se utiliza para establecer el número de dígitos después del punto decimal en el resultado. Si es null, se establecerá por defecto en la escala predeterminada establecida con bcscale(), o se utilizará el valor de la directiva INI bcmath.scale.
+
+Valores devueltos
+La suma de dos operandos, como una cadena.
+
+Errores/Excepciones
+Esta función lanza una excepción ValueError en los siguientes casos:
+num1 o num2 no es una cadena numérica bien formada de BCMath.
+scale está fuera del rango válido.*/
+$a = '1.23456';
+$b = '2.34567';
+
+// 1. Suma sin especificar escala (redondea o trunca a enteros por defecto)
+echo bcadd($a, $b); // Salida: 3
+
+echo "\n";
+
+// 2. Suma con escala (3 decimales)
+echo bcadd($a, $b, 3); // Salida: 3.580
+//=======================================================================================================================================================================================================================
