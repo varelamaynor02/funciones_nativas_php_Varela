@@ -149,4 +149,35 @@ echo "Total de frutas: " . $iterator->count();
 if ($iterator->count() > 0) {
     echo "\nEl iterador tiene elementos.";
 }
+
+/*
+ArrayIterator::getArrayCopy
+
+ArrayIterator::getArrayCopy — Obtener copia de un array
+
+Descripción
+public ArrayIterator::getArrayCopy(): array
+Obtiene una copia de un array.
+*/
+// 1. Definir un array
+$frutas = array("a" => "manzana", "b" => "plátano", "c" => "limón");
+
+// 2. Crear el ArrayIterator
+$iterador = new ArrayIterator($frutas);
+
+// 3. Obtener una copia del array
+$copia = $iterador->getArrayCopy();
+
+// Mostrar la copia
+print_r($copia);
+
+/*
+Resultado:
+Array
+(
+    [a] => manzana
+    [b] => plátano
+    [c] => limón
+)
+*/
 ?>
