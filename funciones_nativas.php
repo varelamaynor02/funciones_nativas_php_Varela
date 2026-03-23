@@ -709,4 +709,28 @@ echo gmp_strval($fact1) . "\n";
 $fact2 = gmp_fact(50); // 50 * 49 * 48, ... etc
 echo gmp_strval($fact2) . "\n";
 //=======================================================================================================================================================
+
+/*
+gmp_abs
+(PHP 4 >= 4.0.4, PHP 5, PHP 7, PHP 8)
+
+gmp_abs — Valor absoluto
+
+Descripción ¶
+gmp_abs(GMP|int|string $num): GMP
+Obtiene el valor absoluto de un número.
+
+Parámetros ¶
+num
+Un objeto GMP, un int, o un string que puede ser interpretado como un número siguiendo la misma lógica que si la cadena fuera usada en gmp_init() con detección automática de la base (es decir cuando base es igual a 0).
+
+Valores devueltos ¶
+Devuelve el valor absoluto num, como un número GMP.*/
+
+$abs1 = gmp_abs("274982683358");
+$abs2 = gmp_abs("-274982683358");
+
+echo gmp_strval($abs1) . "\n";
+echo gmp_strval($abs2) . "\n";
+//=======================================================================================================================================================
 ?>
