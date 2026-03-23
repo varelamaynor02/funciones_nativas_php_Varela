@@ -682,4 +682,31 @@ num1 o num2 no es una cadena numérica bien formada de BCMath.
 scale está fuera del rango válido.*/
 echo bcmul('1.34747474747', '35', 3); // 47.161
 echo bcmul('2', '4'); // 8
+
+//=======================================================================================================================================================
+
+/*gmp_fact
+(PHP 4 >= 4.0.4, PHP 5, PHP 7, PHP 8)
+
+gmp_fact — Factorielle GMP
+
+Descripción ¶
+gmp_fact(GMP|int|string $num): GMP
+Calcula la factorielle (num!) de num.
+
+Parámetros ¶
+num
+El número factoriel.
+
+Un objeto GMP, un int, o un string que puede ser interpretado como un número siguiendo la misma lógica que si la cadena fuera usada en gmp_init() con detección automática de la base (es decir cuando base es igual a 0).
+
+Valores devueltos ¶
+Un objeto GMP.*/
+
+$fact1 = gmp_fact(5); // 5 * 4 * 3 * 2 * 1
+echo gmp_strval($fact1) . "\n";
+
+$fact2 = gmp_fact(50); // 50 * 49 * 48, ... etc
+echo gmp_strval($fact2) . "\n";
+//=======================================================================================================================================================
 ?>
