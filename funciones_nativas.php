@@ -557,4 +557,48 @@ num es menor que 0
 scale está fuera del rango válido*/
 echo bcsqrt('2', 3); // 1.414
 //=======================================================================================================================================================
+
+/*bcsub
+(PHP 4, PHP 5, PHP 7, PHP 8)
+
+bcsub — Resta un número de precisión arbitraria de otro
+
+Descripción ¶
+bcsub(string $num1, string $num2, ?int $scale = null): string
+Resta num2 de num1.
+
+Parámetros ¶
+num1
+El operador izquierdo, como una cadena.
+
+num2
+El operador derecho, como una cadena
+
+scale
+Este parámetro se utiliza para establecer el número de dígitos después del punto decimal en el resultado. Si es null, se establecerá por defecto en la escala predeterminada establecida con bcscale(), o se utilizará el valor de la directiva INI bcmath.scale.
+Valores devueltos ¶
+El resultado de la resta, como un string.
+
+Errores/Excepciones ¶
+Esta función lanza una excepción ValueError en los siguientes casos:
+
+num1 o num2 no es una cadena numérica bien formada de BCMath.
+scale está fuera del rango válido.*/
+// Usar cadenas para evitar problemas de precisión
+$num1 = '100.50';
+$num2 = '25.25';
+
+// Restar $num2 a $num1
+$resultado = bcsub($num1, $num2);
+
+echo $resultado; // Salida: 75
+
+$a = '1.234';
+$b = '5.0';
+
+// bcsub(string $left_operand, string $right_operand, int $scale = ?): string
+// El tercer parámetro '4' define el número de decimales
+echo bcsub($a, $b, 4); // Salida: -3.7660
+//=======================================================================================================================================================
+
 ?>
