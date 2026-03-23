@@ -650,7 +650,7 @@ $cateto2 = 4;
 // Cálculo de la hipotenusa
 $resultado = hypot($cateto1, $cateto2);
 
-echo "La hipotenusa es: " . $resultado; 
+echo "La hipotenusa es: " . $resultado;
 // Salida: La hipotenusa es: 5
 //=======================================================================================================================================================
 
@@ -799,10 +799,10 @@ echo date('d-m-Y'); // Salida: 23-03-2026 (fecha actual)
 //==========================================================================================================================================================
 //str_replace() - Reemplaza todas las apariciones de la cadena de búsqueda con la cadena de reemplazo
 $frase = "El perro es el mejor amigo del hombre.";
-echo strtoupper($frase); echo decbin($minisculas);
+echo strtoupper($frase);
+echo decbin($minisculas);
 
 //==========================================================================================================================================================
 /*fuente: https://www.php.net/manual/es/ref.array.php
 
 The PHP Group. (s.f.). Índice de funciones y métodos (S). PHP: Hypertext Preprocessor. https://www.php.net/manual/es/indexes.functions.php#refentry-index-for-s. Las citas correspondientes son (The PHP Group, s.f.) para el formato parentético y The PHP Group (s.f.) para el narrativo. Consulta el manual completo en php.net.*/
-?>
