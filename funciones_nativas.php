@@ -622,4 +622,36 @@ amplio que el de un int.*/
 echo ceil(4.3), PHP_EOL;    // 5
 echo ceil(9.999), PHP_EOL;  // 10
 echo ceil(-3.14), PHP_EOL;  // -3
+
+//=======================================================================================================================================================
+/*
+hypot
+(PHP 4 >= 4.1.0, PHP 5, PHP 7, PHP 8)
+
+hypot — Calcula la longitud de la hipotenusa de un triángulo rectángulo
+
+Descripción ¶
+hypot(float $x, float $y): float
+hypot() devuelve la longitud de la hipotenusa de un triángulo rectángulo que tiene lados de longitud x y y o bien la distancia del punto (x, y) desde el origen. Esto es equivalente a sqrt($x*$x + $y*$y).
+
+Parámetros ¶
+x
+Longitud del primer lado
+
+y
+Longitud del segundo lado
+
+Valores devueltos: La longitud calculada de la hipotenusa*/
+
+// Catetos del triángulo
+$cateto1 = 3;
+$cateto2 = 4;
+
+// Cálculo de la hipotenusa
+$resultado = hypot($cateto1, $cateto2);
+
+echo "La hipotenusa es: " . $resultado; 
+// Salida: La hipotenusa es: 5
+//=======================================================================================================================================================
+
 ?>
