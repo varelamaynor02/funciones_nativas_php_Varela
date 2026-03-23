@@ -280,4 +280,28 @@ $b[0]  = 7;
 $b[5]  = 9;
 $b[10] = 11;
 var_dump(count($b));
+
+/*array_pop
+(PHP 4, PHP 5, PHP 7, PHP 8)
+
+array_pop — Desapila un elemento del final de un array
+
+Descripción ¶
+array_pop(array &$array): mixed
+array_pop() desapila y devuelve el valor del último elemento del array array, acortándolo en un elemento.
+
+Nota: Esta función reinicia el puntero al inicio del array de entrada (equivalente a reset()).
+
+Parámetros ¶
+array
+El array del cual se recupera el valor.
+
+Valores devueltos ¶
+Devuelve el valor del último elemento del array array. Si array está vacío, null será devuelto.
+*/
+$stack = array("orange", "banana", "apple", "raspberry");
+$fruit = array_pop($stack);
+print_r($stack);
+print_r($fruit);
+//Despues de esto raspberry se ha eliminado del array $stack y se ha asignado a la variable $fruit. El resultado de print_r($stack) será Array ( [0] => orange [1] => banana [2] => apple ) y el resultado de print_r($fruit) será raspberry.
 ?>
