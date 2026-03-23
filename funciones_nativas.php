@@ -340,7 +340,7 @@ $frutas = ["Manzana", "Plátano", "Naranja", "Uva"];
 // Usar sizeof() para contar los elementos
 $cantidad = sizeof($frutas);
 
-echo "El array tiene " . $cantidad . " frutas."; 
+echo "El array tiene " . $cantidad . " frutas.";
 // Salida: El array tiene 4 frutas.
 //=======================================================================================================================================================================================================================
 
@@ -600,5 +600,26 @@ $b = '5.0';
 // El tercer parámetro '4' define el número de decimales
 echo bcsub($a, $b, 4); // Salida: -3.7660
 //=======================================================================================================================================================
+/*ceil
+(PHP 4, PHP 5, PHP 7, PHP 8)
 
+ceil — Redondea al número superior
+
+Descripción ¶
+ceil(int|float $num): float
+Devuelve el entero superior del número num.
+
+Parámetros ¶
+num
+El valor a redondear
+
+Valores devueltos ¶
+El valor num redondeado al entero superior. 
+El valor devuelto es un número de punto flotante (float), 
+ya que el intervalo de valores de un float es generalmente más 
+amplio que el de un int.*/
+
+echo ceil(4.3), PHP_EOL;    // 5
+echo ceil(9.999), PHP_EOL;  // 10
+echo ceil(-3.14), PHP_EOL;  // -3
 ?>
