@@ -399,3 +399,40 @@ echo "\n";
 // 2. Suma con escala (3 decimales)
 echo bcadd($a, $b, 3); // Salida: 3.580
 //=======================================================================================================================================================================================================================
+/*bcdivmod
+(PHP 8 >= 8.4.0)
+
+bcdivmod — Devuelve el cociente y el resto de un número de precisión arbitraria
+
+Descripción
+bcdivmod(string $num1, string $num2, ?int $scale = null): array
+Devuelve el cociente y el resto de la división de num1 por num2.
+
+Parámetros
+num1
+El dividendo, como una cadena.
+
+num2
+El divisor, como una cadena.
+
+scale
+Este parámetro se utiliza para establecer el número de dígitos después del punto decimal en el resultado. Si es null, se establecerá por defecto en la escala predeterminada establecida con bcscale(), o se utilizará el valor de la directiva INI bcmath.scale.
+
+Valores devueltos
+Devuelve un array indexado donde el primer elemento es el cociente en forma de string y el segundo elemento es el resto en forma de string.*/
+
+// Usando bcdiv y bcmod con cadenas para alta precisión
+$dividendo = "100.50";
+$divisor = "3";
+
+// 1. División (bcdiv)
+// Sintaxis: bcdiv(dividendo, divisor, decimales)
+$resultado_div = bcdiv($dividendo, $divisor, 2); // Devuelve "33.50"
+echo "División: $resultado_div \n";
+
+// 2. Módulo (bcmod) - Nota: bcmod solo funciona con enteros en versiones antiguas,
+// para decimales se usa la lógica: $rem = $num - bcmul($divisor, bcdiv($num, $divisor, 0), 0);
+$entero1 = "10";
+$entero2 = "3";
+$resultado_mod = bcmod($entero1, $entero2); // Devuelve "1"
+echo "Módulo: $resultado_mod \n";
