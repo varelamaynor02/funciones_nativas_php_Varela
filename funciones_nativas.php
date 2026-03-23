@@ -344,3 +344,23 @@ echo "El array tiene " . $cantidad . " frutas.";
 // Salida: El array tiene 4 frutas.
 //=======================================================================================================================================================================================================================
 
+/*bcfloor
+bcfloor — Redondea hacia abajo un número de precisión arbitraria
+
+Descripción 
+bcfloor(string $num): string
+Devuelve el valor entero inferior siguiente redondeando num si es necesario.
+
+Parámetros
+num
+El valor a redondear.
+
+Valores devueltos
+Devuelve una cadena numérica representando num redondeado hacia abajo al entero más cercano.
+
+Errores/Excepciones
+Esta función lanza una ValueError si num no es un string numérico BCMath bien formado.*/
+echo floor(4.7);   // Salida: 4
+echo floor(4.2);   // Salida: 4
+echo floor(-2.1);  // Salida: -3 (redondea hacia abajo)
+//=======================================================================================================================================================================================================================
