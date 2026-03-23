@@ -256,4 +256,28 @@ $frutas = ["a" => "manzana", "b" => "banana", "c" => "uva"];
 $clave = array_search("banana", $frutas);
 
 echo $clave; // Salida: b
+
+/*count
+count — Cuenta todos los elementos de un array o en un objeto Countable
+
+Descripción 
+count(Countable|array $value, int $mode = COUNT_NORMAL): int
+Cuenta todos los elementos en un array cuando se utiliza con un array. Cuando se utiliza con un objeto que implementa la interfaz Countable, esto devuelve el valor de la método Countable::count().
+
+Parámetros 
+value
+Un array o un objeto Countable.
+
+mode
+Si el parámetro opcional mode vale COUNT_RECURSIVE (o 1), count() va contar recursivamente los arrays. Esto es particularmente útil para contar el número de elementos de un array.
+*/
+$a[0] = 1;
+$a[1] = 3;
+$a[2] = 5;
+var_dump(count($a));
+
+$b[0]  = 7;
+$b[5]  = 9;
+$b[10] = 11;
+var_dump(count($b));
 ?>
