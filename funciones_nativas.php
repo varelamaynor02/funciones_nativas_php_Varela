@@ -327,3 +327,20 @@ Devuelve el nuevo número de elementos en el array.
 $stack = array("orange", "banana");
 array_push($stack, "apple", "raspberry");
 print_r($stack);
+
+/*
+sizeof
+sizeof — Alias de count()
+
+Descripción 
+Esta función es un alias de: count().*/
+
+$frutas = ["Manzana", "Plátano", "Naranja", "Uva"];
+
+// Usar sizeof() para contar los elementos
+$cantidad = sizeof($frutas);
+
+echo "El array tiene " . $cantidad . " frutas."; 
+// Salida: El array tiene 4 frutas.
+//=======================================================================================================================================================================================================================
+
